@@ -1,5 +1,3 @@
-(Apologies for the atorcious formatting, i will attempt to fix it once I've finished other tasks related to submitting this solution)
-
 The main class to run the longest path algorithm is found in the class "Solution".
 
 The program reads user inputs from System.in and expects the input to have the following format:
@@ -11,7 +9,8 @@ The next n lines are pairs of ints representing a "from" vertex id and a "to" ve
 	  	1 2
     
 int id: The final line is a single integer representing a vertex id to run the longest path algorithm from followed by a newline.
-	  example input:
+
+example input:
    
  			10
     
@@ -39,8 +38,9 @@ int id: The final line is a single integer representing a vertex id to run the l
 
 
 Note: if copying and pasting inputs, such as the example above, be sure to copy the blank line below the final vertex id.
-      Whitespace surrounding inputs shouldn't affect the operation of the program, but it is crucial that integer pairs have exactly 1 space between them.
+Whitespace surrounding inputs shouldn't affect the operation of the program, but it is crucial that integer pairs have exactly 1 space between them.
 
 The output from the algorithm is provided by System.out after all inputs are received. An example from the above input is provided below:
+    
     Longest path from vertex 1 is 4 steps to vertex 5
     1 -> 2 -> 3 -> 4 -> 5
