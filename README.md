@@ -8,7 +8,8 @@ The next n lines are pairs of ints representing a "from" vertex id and a "to" ve
    
 	  	1 2
     
-int id: The final line is a single integer representing a vertex id to run the longest path algorithm from **followed by a newline**.
+int id: The final line is a single integer representing a vertex id to run the longest path algorithm from **followed by a newline**. 
+(Note: the provided example needs an extra blank line at the end to be considered correct)
 
 example input:
    
