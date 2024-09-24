@@ -35,9 +35,9 @@ example input:
 			4 5
    
   			1
-			
-   			##
 
+
+      			
 
 Note: if copying and pasting inputs, such as the example above, be sure to copy the blank line below the final vertex id.
 Whitespace surrounding inputs shouldn't affect the operation of the program, but it is crucial that integer pairs have exactly 1 space between them.
