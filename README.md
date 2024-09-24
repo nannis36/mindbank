@@ -2,6 +2,7 @@ The main class to run the longest path algorithm is found in the class "Solution
 The program reads user inputs from System.in and expects the input to have the following format:
     int n: The first line is the number of graph edges to construct. 
 	  The next n lines are pairs of ints representing a "from" vertex id and a "to" vertex id separated by a single space. example:
+   
 	  	1 2
 	  int id: The final line is a single integer representing a vertex id to run the longest path algorithm from followed by a newline.
 	  example input:
