@@ -35,7 +35,7 @@ example input:
 			4 5
    
   			1
-
+			/n
 
 
 Note: if copying and pasting inputs, such as the example above, be sure to copy the blank line below the final vertex id.
