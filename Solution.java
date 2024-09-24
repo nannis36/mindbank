@@ -44,7 +44,7 @@ public class Solution {
 			
 			IntStream.range(0, inputLength).forEach(tItr -> {
 			    try {
-			    	String[] edgeConnectionInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+			    	String[] edgeConnectionInput = bufferedReader.readLine().replaceAll("\\s+$", "").trim().split(" ");
 			
 			    	int from = Integer.parseInt(edgeConnectionInput[0]);
 			
@@ -58,29 +58,27 @@ public class Solution {
 			        throw new RuntimeException(ex);
 			    }
 			});
-			
-			System.out.println("TEST");
 	
 	        int sourceVertexId = Integer.parseInt( bufferedReader.readLine().trim() );
 	        List<Vertex> result = dag.findLongestPathFromVertex( sourceVertexId );
 	
 	        int length = 0;
 			Iterator<Vertex> iter = result.iterator();
+			String path = "";
 			while(iter.hasNext()) {
 				Vertex v = iter.next();
 				int vid = v.getId();
-				System.out.print(vid);
+				path += vid;
 				if(vid != sourceVertexId) {
 					length++;
 				}
 				if(iter.hasNext()) {
-					System.out.print(" -> ");
-				} else {
-					System.out.print("\n");
+					path += " -> ";
 				}
 			}
 			
 			System.out.println("Longest path from vertex "+sourceVertexId+" is "+length+" steps to vertex "+result.get(result.size()-1).getId());
+			System.out.println(path);
 	        
 			bufferedReader.close();
 		} catch(Exception e) {
