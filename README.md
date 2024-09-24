@@ -1,4 +1,4 @@
-The main class to run the longest path algorithm is found in the class "Solution".
+The main class to run the longest path algorithm is the class "Solution".
 
 The program reads user inputs from System.in and expects the input to have the following format:
 
