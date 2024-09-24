@@ -1,3 +1,5 @@
+(Apologies for the atorcious formatting, i will attempt to fix it once I've finished other tasks related to submitting this solution)
+
 The main class to run the longest path algorithm is found in the class "Solution".
 
 The program reads user inputs from System.in and expects the input to have the following format:
