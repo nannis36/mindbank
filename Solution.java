@@ -2,8 +2,7 @@ package mindBankDAG;
 
 import java.io.IOException;
 import java.io.*;
-import java.util.Iterator;
-import java.util.List;
+import java.util.Map;
 import java.util.stream.*;
 
 public class Solution {
@@ -48,13 +47,13 @@ public class Solution {
 			
 			IntStream.range(0, inputLength).forEach(tItr -> {
 			    try {
-			    	String[] edgeConnectionInput = bufferedReader.readLine().replaceAll("\\s+$", "").trim().split(" ");
+			    	String[] edgeConnectionInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 			
 			    	int from = Integer.parseInt(edgeConnectionInput[0]);
 			
 			    	int to = Integer.parseInt(edgeConnectionInput[1]);
 	
-		            	dag.connectVertices(from, to);
+		            dag.connectVertices(from, to);
 			
 			        //System.out.println("Added connection: "+from+" to "+to);
 			
@@ -63,26 +62,10 @@ public class Solution {
 			    }
 			});
 	
-	        	int sourceVertexId = Integer.parseInt( bufferedReader.readLine().trim() );
-	        	List<Vertex> result = dag.findLongestPathFromVertex( sourceVertexId );
-	
-	        	int length = 0;
-			Iterator<Vertex> iter = result.iterator();
-			String path = "";
-			while(iter.hasNext()) {
-				Vertex v = iter.next();
-				int vid = v.getId();
-				path += vid;
-				if(vid != sourceVertexId) {
-					length++;
-				}
-				if(iter.hasNext()) {
-					path += " -> ";
-				}
-			}
+        	int sourceVertexId = Integer.parseInt( bufferedReader.readLine().trim() );
+        	Map<String,Integer> result = dag.findLongestPathFromVertex( sourceVertexId );
 			
-			System.out.println("Longest path from vertex "+sourceVertexId+" is "+length+" steps to vertex "+result.get(result.size()-1).getId());
-			System.out.println(path);
+			System.out.println("The longest path from vertex "+sourceVertexId+" is "+result.get("distance")+" steps to vertex "+result.get("longestId"));
 	        
 			bufferedReader.close();
 		} catch(Exception e) {
@@ -108,41 +91,25 @@ public class Solution {
 				"4 5",
 				"1"};
 		
-	    	int inputLength = Integer.parseInt(input[0].trim());
+    	int inputLength = Integer.parseInt(input[0].trim());
 
-	        for(int i = 1; i < inputLength+1; i++) {
-	            String[] edgeConnectionInput = input[i].replaceAll("\\s+$", "").split(" ");
-	
-	            int from = Integer.parseInt(edgeConnectionInput[0]);
-	
-	            int to = Integer.parseInt(edgeConnectionInput[1]);
-	
-	            dag.connectVertices(from, to);
-	
-		    System.out.println("Added connection: "+from+" to "+to);
-	        };
-	        
-	        int sourceVertexId = Integer.parseInt( input[input.length-1].trim() );;
-	        
-	        List<Vertex> result = dag.findLongestPathFromVertex( sourceVertexId );
-	        
-	        int length = 0;
-		Iterator<Vertex> iter = result.iterator();
-		while(iter.hasNext()) {
-			Vertex v = iter.next();
-			int vid = v.getId();
-			System.out.print(vid);
-			if(vid != sourceVertexId) {
-				length++;
-			}
-			if(iter.hasNext()) {
-				System.out.print(" -> ");
-			} else {
-				System.out.print("\n");
-			}
-		}
+        for(int i = 1; i < inputLength+1; i++) {
+            String[] edgeConnectionInput = input[i].replaceAll("\\s+$", "").split(" ");
+
+            int from = Integer.parseInt(edgeConnectionInput[0]);
+
+            int to = Integer.parseInt(edgeConnectionInput[1]);
+
+            dag.connectVertices(from, to);
+
+            System.out.println("Added connection: "+from+" to "+to);
+        };
+        
+        int sourceVertexId = Integer.parseInt( input[input.length-1].trim() );;
+
+    	Map<String,Integer> result = dag.findLongestPathFromVertex( sourceVertexId );
 		
-		System.out.println("Longest path from vertex "+sourceVertexId+" is "+length+" steps to vertex "+result.get(result.size()-1).getId());
+		System.out.println("The longest path from vertex "+sourceVertexId+" is "+result.get("distance")+" steps to vertex "+result.get("longestId"));
         
 	}
 }
