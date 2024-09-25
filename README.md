@@ -11,31 +11,31 @@ The next n lines are pairs of ints representing a "from" vertex id and a "to" ve
 int id: The final line is a single integer representing a vertex id to run the longest path algorithm from **followed by a newline**. 
 (Note: the provided example needs an extra blank line at the end to be considered correct)
 
-example input:
+Example input:
    
- 			10
+10
     
-			0 1
+0 1
    
-			0 2
+0 2
    
-			1 3
+1 3
    
-			1 2
+1 2
    
-			2 4
+2 4
    
-			2 5
+2 5
    
-			2 3
+2 3
    
-			3 5
+3 5
    
-			3 4
+3 4
    
-			4 5
+4 5
    
-  			1
+1
 
 
       			
