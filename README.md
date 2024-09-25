@@ -4,7 +4,9 @@ The program reads user inputs from System.in and expects the input to have the f
 
 int n: The first line is the number of graph edges to construct. 
     
-The next n lines are pairs of ints representing a "from" vertex id and a "to" vertex id separated by a single space. example:
+The next n lines are pairs of ints representing a "from" vertex id and a "to" vertex id separated by a single space.
+
+Example:
    
 	1 2
     
