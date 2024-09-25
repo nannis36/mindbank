@@ -93,7 +93,6 @@ public class Solution {
 	public static void runTestInputs() {
 		DirectedAcyclicGraph dag = new DirectedAcyclicGraph();
 		
-		// also need to provide vertex to 
 		//String[] input1 = {"3", "1 2", "1 4", "1 3", "1"};
 		String[] input = {
 				"10", 
