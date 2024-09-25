@@ -1,3 +1,5 @@
+UPDATE: there was a feature to display the vertices along the longest path but wasn't working as intended and had to be removed. 
+
 The main class to run the longest path algorithm is the class "Solution".
 
 The program reads user inputs from System.in and expects the input to have the following format:
