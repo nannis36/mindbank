@@ -3,8 +3,6 @@ package mindBankDAG;
 import java.util.HashMap;
 import java.util.Map;
 
-//===================================================================== Graph Class ===================================================================== \\
-//Graph only allows unique ids for vertices and will create a new vertex or return an existing vertex for a given integer id
 class Graph{
 	protected Map<Integer,Vertex> vertices;
 	
