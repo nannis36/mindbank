@@ -48,4 +48,3 @@ Whitespace surrounding inputs shouldn't affect the operation of the program, but
 The output from the algorithm is provided by System.out after all inputs are received. An example from the above input is provided below:
     
     Longest path from vertex 1 is 4 steps to vertex 5
-    1 -> 2 -> 3 -> 4 -> 5
