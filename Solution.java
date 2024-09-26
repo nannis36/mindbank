@@ -61,8 +61,8 @@ public class Solution {
 			    }
 			});
 	
-        	int sourceVertexId = Integer.parseInt( bufferedReader.readLine().trim() );
-        	Map<String,Integer> result = dag.findLongestPathFromVertex( sourceVertexId );
+	        	int sourceVertexId = Integer.parseInt( bufferedReader.readLine().trim() );
+	        	Map<String,Integer> result = dag.findLongestPathFromVertex( sourceVertexId );
 			
 			System.out.println("The longest path from vertex "+sourceVertexId+" is "+result.get("distance")+" steps to vertex "+result.get("longestId"));
 	        
@@ -90,23 +90,23 @@ public class Solution {
 				"4 5",
 				"1"};
 		
-    	int inputLength = Integer.parseInt(input[0].trim());
-
-        for(int i = 1; i < inputLength+1; i++) {
-            String[] edgeConnectionInput = input[i].replaceAll("\\s+$", "").split(" ");
-
-            int from = Integer.parseInt(edgeConnectionInput[0]);
-
-            int to = Integer.parseInt(edgeConnectionInput[1]);
-
-            dag.connectVertices(from, to);
-
-            System.out.println("Added connection: "+from+" to "+to);
-        };
-        
-        int sourceVertexId = Integer.parseInt( input[input.length-1].trim() );;
-
-    	Map<String,Integer> result = dag.findLongestPathFromVertex( sourceVertexId );
+	    	int inputLength = Integer.parseInt(input[0].trim());
+	
+	        for(int i = 1; i < inputLength+1; i++) {
+	            String[] edgeConnectionInput = input[i].replaceAll("\\s+$", "").split(" ");
+	
+	            int from = Integer.parseInt(edgeConnectionInput[0]);
+	
+	            int to = Integer.parseInt(edgeConnectionInput[1]);
+	
+	            dag.connectVertices(from, to);
+	
+	            System.out.println("Added connection: "+from+" to "+to);
+	        };
+	        
+	        int sourceVertexId = Integer.parseInt( input[input.length-1].trim() );;
+	
+	    	Map<String,Integer> result = dag.findLongestPathFromVertex( sourceVertexId );
 		
 		System.out.println("The longest path from vertex "+sourceVertexId+" is "+result.get("distance")+" steps to vertex "+result.get("longestId"));
         
