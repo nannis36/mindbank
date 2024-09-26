@@ -52,7 +52,7 @@ public class Solution {
 			
 			    	int to = Integer.parseInt(edgeConnectionInput[1]);
 	
-		            dag.connectVertices(from, to);
+		            	dag.connectVertices(from, to);
 			
 			        //System.out.println("Added connection: "+from+" to "+to);
 			
